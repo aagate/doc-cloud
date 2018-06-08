@@ -603,8 +603,9 @@
   </para>
 <screen>sudo lspci -D | grep -i net</screen>
   <para>
-   and use this information for the <literal>bus-address</literal> value in
-   your <literal>nic_mappings.yml</literal> file.
+   and enter this information in the space below. Use this information for the
+   <literal>bus-address</literal> value in your
+   <literal>nic_mappings.yml</literal> file.
   </para>
   <informaltable colsep="1" rowsep="1">
    <tgroup cols="1">
@@ -618,7 +619,6 @@
      <row>
       <entry>
 <screen>
-Enter the information for your system.
 <?dbsuse-disable-trimming?>
 
 
@@ -640,10 +640,10 @@ Enter the information for your system.
   </para>
 <screen>cat /sys/class/net/&lt;device name&gt;/dev_port</screen>
   <para>
-   where the 'device-name' is the name of the device
-   <emphasis role="bold">currently mapped</emphasis> to this address, not
-   necessarily the name of the device <emphasis role="bold">to be
-   mapped</emphasis>.
+   where the 'device-name' is the name of the device <emphasis
+   role="bold">currently mapped</emphasis> to this address, not necessarily the
+   name of the device <emphasis role="bold">to be mapped</emphasis>. Enter the
+   information for your system in the space below.
   </para>
   <informaltable colsep="1" rowsep="1">
    <tgroup cols="1">
@@ -657,7 +657,6 @@ Enter the information for your system.
      <row>
       <entry>
 <screen>
-Enter the information for your system.
 <?dbsuse-disable-trimming?>
 
 

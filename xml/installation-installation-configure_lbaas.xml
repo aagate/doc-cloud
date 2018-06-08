@@ -189,38 +189,17 @@ openssl req -x509 -passin pass:foobar -new -nodes -key cakey.pem -out serverca_0
     Without these images the Octavia load balancer will not work.
    </para>
   </warning>
-  <para vendor="suse">
-   The &ostack; load balancing service (Octavia) does not automatically upload
-   the Amphora guest image. The image
-   <filename>/srv/www/suse-12.3/x86_64/repos/Cloud/suse/noarch/openstack-octavia-amphora-image.rpm</filename>
-   should be placed on the &lcm; node and the image registered.
-  </para>
-  <itemizedlist vendor="hpe">
-   <listitem>
   <para>
-   You can download the <emphasis role="bold">Octavia Amphora HA Proxy Guest
-   Image</emphasis> from &hpe; Software Entitlement Portal.
-  </para>
-   </listitem>
-   <listitem>
-    <para>
-     Sign in and download the product and signature files from the following
-     link: <link xlink:href="http://www.hpe.com/software/entitlements">Software
-     Entitlement Portal</link>.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     Once the image is downloaded it needs to be placed on the &lcm;
-     node and the image registered.
-    </para>
-   </listitem>
-  </itemizedlist>
-  <para>
-   <emphasis role="bold">Register the image.</emphasis>
+   <emphasis role="bold">Register the image.</emphasis> The &ostack; load
+   balancing service (Octavia) does not automatically register the Amphora
+   guest image.
   </para>
   <procedure>
    <step>
+    <para>
+     The full path and name for the Amphora image is
+     <filename>/srv/www/suse-12.3/x86_64/repos/Cloud/suse/noarch/openstack-octavia-amphora-image.rpm</filename>
+    </para>
     <para>
      Switch to the ansible directory and register the image by giving the full
      path and name for the Amphora image as an argument to service_package:
@@ -248,7 +227,7 @@ $ glance image-list
 +--------------------------------------+------------------------+
 | afbe5aa9-efd4-4a24-9cfe-3095acbfd033 | CaaSP-2                |
 | 0526d2d7-c196-4c62-bfe5-a13bce5c7f39 | cirros-0.4.0-x86_64    |
-| d65daf17-b0f6-4f00-b22a-0ce7b6c1e01e | OpenSUSE42.2           |
+| d65daf17-b0f6-4f00-b22a-0ce7b6c1e01e | OpenSUSE42.3           |
 | e64cb914-15d2-4ad8-a63c-b7c60a6c232e | octavia-amphora-x86_64 |
 +--------------------------------------+------------------------+
     </screen>
